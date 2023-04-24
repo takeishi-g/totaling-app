@@ -54,9 +54,9 @@
       const tr = document.getElementById("tr");
       const td = document.createElement("td");
 
-      
+    
 
-     
+      
 
       function createAccordionHeader(i) {
         const accordion = document.getElementById("accordion");
@@ -371,29 +371,7 @@
         const drow_num = document.querySelector('#drow_num');
 
         
-        async function sendData() {
-
-          
-          for (let i = 0; i <= dataList.length; i++){
-            
-            await fetch(api_url, {
-              method: "post",
-              headers: {
-                "content-Type": "application/x-www-form-urlencoded"
-            },
-            body: encodeURI(`name=${dataList[i].name}&task=${dataList[i].task}&time=${dataList[i].time}&mujinTime=${dataList[i].mujin_time}&drow_num=${drow_num.value}`)
-          })
-          
-          .then((response) => {
-            response.json().then((json) => {
-              console.log(json.message);
-            });
-          })
-          .catch((error) => {
-            console.log(error.message);
-          });
-        };
-      }
+        
         
         console.clear();
 
